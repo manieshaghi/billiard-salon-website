@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="tr" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cameleon Bilardo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-brand" role="banner">
+            <img src="https://i.ibb.co/1XQZQJZ/cameleon-logo.png" alt="Cameleon Bilardo logosu" class="site-logo">
+            <span class="sr-only">Cameleon Bilardo</span>
+        </div>
+    </header>
+    <main>
+        <section id="prices">
+            <h2 style="font-size: 1.8rem; margin: 1.5rem 0 1rem; color: var(--navy-900);">OYUN ÜCRETLERİ</h2>
+            <div id="prices-container">
+                <!-- Prices will be loaded here by menu.js -->
+            </div>
+        </section>
+        
+        <div id="menuOption" class="main-content menu-option" role="button" tabindex="0" aria-label="Menü">
+            <h2>Menü</h2>
+            <p>Lezzetli yiyecek ve içecek seçeneklerimizi görmek için menüyü inceleyin.</p>
+        </div>
+        <script>
+            const menuOption = document.getElementById('menuOption');
+
+            function goToMenu() {
+                menuOption.classList.add('menu-option-clicked');
+                setTimeout(() => {
+                    window.location.href = 'menu-page.html';
+                }, 180);
+            }
+
+            menuOption.addEventListener('click', goToMenu);
+            menuOption.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    goToMenu();
+                }
+            });
+        </script>
+        <section id="contact">
+            <h2>Bize Ulaşın</h2>
+            <p>Adres: Ankara Çankaya Tunalı Hilmi Cd. 50/1 Kat:1 Kavaklıdere Mah.</p>
+            <p>Telefon: <a href="tel:905433563702">0 (543) 356 37 02</a></p>
+        </section>
+    </main>
+    <footer>
+    </footer>
+    <script src="menu.js"></script>
+</body>
+</html>

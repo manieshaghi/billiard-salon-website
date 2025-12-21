@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menü - Cameleon Bilardo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-brand" role="banner">
+            <a href="index.html" class="back-button">Ana Sayfaya Dön</a>
+            <span class="sr-only">Cameleon Bilardo</span>
+        </div>
+    </header>
+    
+    <main>
+        <section id="menu">
+            <h2 style="text-align: left; font-size: 1.8rem; border-bottom: 2px solid #1f4ba5; display: inline-block; padding-bottom: 0.5rem; margin: 1rem 1rem 1rem 1.5rem; font-weight: 600;">Menümüz</h2>
+            <div id="menu-container">
+                <div class="menu-category">
+                    <h3>İçecekler</h3>
+                    <div class="menu-items">
+                        <a href="menu-item.html?name=Su&price=25 TL&category=İçecekler" class="menu-item">
+                            <div class="menu-item-name">Su</div>
+                            <div class="menu-item-price">25 TL</div>
+                        </a>
+                        <a href="menu-item.html?name=Soda&price=30 TL&category=İçecekler" class="menu-item">
+                            <div class="menu-item-name">Soda</div>
+                            <div class="menu-item-price">30 TL</div>
+                        </a>
+                        <a href="menu-item.html?name=Çay&price=30 TL&category=İçecekler" class="menu-item">
+                            <div class="menu-item-name">Çay</div>
+                            <div class="menu-item-price">30 TL</div>
+                        </a>
+                        <a href="menu-item.html?name=Fanta&price=80 TL&category=İçecekler" class="menu-item">
+                            <div class="menu-item-name">Fanta</div>
+                            <div class="menu-item-price">80 TL</div>
+                        </a>
+                        <a href="menu-item.html?name=Sprite&price=80 TL&category=İçecekler" class="menu-item">
+                            <div class="menu-item-name">Sprite</div>
+                            <div class="menu-item-price">80 TL</div>
+                        </a>
+                        <a href="menu-item.html?name=Kola&price=80 TL&category=İçecekler" class="menu-item">
+                            <div class="menu-item-name">Kola</div>
+                            <div class="menu-item-price">80 TL</div>
+                        </a>
+                        <a href="menu-item.html?name=Fuse Tea Lemon&price=80 TL&category=İçecekler" class="menu-item">
+                            <div class="menu-item-name">Fuse Tea Lemon</div>
+                            <div class="menu-item-price">80 TL</div>
+                        </a>
+                        <a href="menu-item.html?name=Fuse Tea Peach&price=80 TL&category=İçecekler" class="menu-item">
+                            <div class="menu-item-name">Fuse Tea Peach</div>
+                            <div class="menu-item-price">80 TL</div>
+                        </a>
+                        <a href="menu-item.html?name=Türk Kahvesi&price=100 TL&category=İçecekler" class="menu-item">
+                            <div class="menu-item-name">Türk Kahvesi</div>
+                            <div class="menu-item-price">100 TL</div>
+                        </a>
+                        <a href="menu-item.html?name=Nescafe&price=100 TL&category=İçecekler" class="menu-item">
+                            <div class="menu-item-name">Nescafe</div>
+                            <div class="menu-item-price">100 TL</div>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="menu-category">
+                    <h3>Yiyecekler</h3>
+                    <div class="menu-items">
+                        <a href="menu-item.html?name=Tost&price=130 TL&category=Yiyecekler" class="menu-item out-of-stock">
+                            <div class="menu-item-name">Tost</div>
+                            <div class="menu-item-price">130 TL</div>
+                        </a>
+                        <a href="menu-item.html?name=Gofret&price=35 TL&category=Yiyecekler" class="menu-item">
+                            <div class="menu-item-name">Gofret</div>
+                            <div class="menu-item-price">35 TL</div>
+                        </a>
+                        <a href="menu-item.html?name=Kek&price=35 TL&category=Yiyecekler" class="menu-item">
+                            <div class="menu-item-name">Kek</div>
+                            <div class="menu-item-price">35 TL</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="menu.js"></script>
+    <script>
+        // Move Atıştırmalıklar to the top on mobile
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuContainer = document.getElementById('menu-container');
+            if (!menuContainer) return;
+            
+            // Find the Atıştırmalıklar category
+            const categories = Array.from(menuContainer.children);
+            const snackCategory = categories.find(category => {
+                const h3 = category.querySelector('h3');
+                return h3 && h3.textContent.trim() === 'Atıştırmalıklar';
+            });
+            
+            // Move it to the top on mobile
+            if (snackCategory && window.innerWidth <= 768) {
+                menuContainer.insertBefore(snackCategory, menuContainer.firstChild);
+            }
+        });
+    </script>
+</body>
+</html>
