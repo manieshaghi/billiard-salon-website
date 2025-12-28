@@ -89,8 +89,8 @@ document.addEventListener('DOMContentLoaded', function() {
             items: [
                 { name: 'Gofret', price: '35 TL', flavor: 'Çikolata dolgulu çıtır katlar', category: 'Atıştırmalıklar' },
                 { name: 'Kek', price: '35 TL', flavor: 'Kakaolu yumuşak kek', category: 'Atıştırmalıklar' },
-                { name: 'Tam Kasarlı Tost', price: '200 TL', flavor: 'Tam kaşar peyniri dolgulu lezzetli tost', category: 'Atıştırmalıklar' },
-                { name: 'Yarı Kasarlı Tost', price: '100 TL', flavor: 'Yarı kaşar peyniri dolgulu hafif tost', category: 'Atıştırmalıklar' }
+                { name: 'küçük kaşarlı tost', price: '75 TL', flavor: 'küçük ekmekle kaşar peyniri dolgulu lezzetli tost', category: 'Atıştırmalıklar' },
+                { name: 'büyük kaşarlı tost', price: '100 TL', flavor: 'büyük ekmekle kaşar peyniri dolgulu lezzetli tost', category: 'Atıştırmalıklar' }
             ]
         }
     ];
