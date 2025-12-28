@@ -59,6 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
             items: [
                 { name: 'Çay', price: '30 TL', flavor: 'Demli klasik tat', category: 'Sıcak İçecekler' },
                 { name: 'Türk Kahvesi', price: '100 TL', flavor: 'Yoğun kavrulmuş aroması', category: 'Sıcak İçecekler' },
+                { name: 'Filtre Kahve', price: '100 TL', flavor: 'Yumuşak ve dengeli filtre kahve', category: 'Sıcak İçecekler' },
                 { name: 'Nescafe', price: '100 TL', flavor: 'Hafif kremalı kahve', category: 'Sıcak İçecekler' }
             ]
         },
