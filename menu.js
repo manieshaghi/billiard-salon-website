@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
         {
             name: 'Tek Kişilik (Antrenman)',
             price: '100 TL/saat',
-            hours: '12:00 - 17:00',
+            hours: 'Hafta içi: 12:00 - 17:00<br>Hafta sonu: 12:00 - 15:00',
             startTime: 12,
             endTime: 17,
             isSpecial: true
